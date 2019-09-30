@@ -55,6 +55,12 @@ app.get('/error', (req, res) => {
     const errorMessage = "<h2>Oh no something went wrong ...</h2>"
     res.send(errorMessage);
 })
+app.get('/info', (req, res) => {
+    res.render('info.hbs', {
+        title: "Info",
+        name: "Nguyen Song Vo"
+    });
+})
 app.listen(PORT, () => {
     console.log("Rendering...")
 })

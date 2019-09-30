@@ -4,6 +4,7 @@ const fs = require('fs');
 
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.set('view engine', 'hbs');
 // app.use((req, res, next) => {
@@ -54,6 +55,6 @@ app.get('/error', (req, res) => {
     const errorMessage = "<h2>Oh no something went wrong ...</h2>"
     res.send(errorMessage);
 })
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("Rendering...")
 })
